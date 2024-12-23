@@ -13,7 +13,8 @@ import {
   Lock,
   ChartNetwork,
   Book,
-  Table
+  Table,
+  LucideGroup
 } from "lucide-react";
 
 import {
@@ -65,7 +66,7 @@ const items = [
     ],
   },
   {
-    title: "Free Lunch Eligibility Chart",
+    title: "Free Lunch Schedules",
     url: "#",
     icon: Table,
     subItems: [],
