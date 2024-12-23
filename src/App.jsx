@@ -1,6 +1,29 @@
 import HeaderBar from "./components/reusableComponents/HeaderBar";
 import { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar";
 import { AppSidebar } from "./components/reusableComponents/AppSidebar";
+
+
+
+  // <div className="flex flex-col flex-wrap">
+
+    //   <SidebarProvider>
+    //     <div className="grow-0">
+    //       <AppSidebar />
+    //     </div>
+
+
+    //     <div className="grow">
+    //       <HeaderBar />
+    //       <SidebarTrigger />
+    //       {children}
+    //     </div>
+
+    //   </SidebarProvider >
+
+    // </div>
+
+
+
 // export default function App({ children }) {
 //   return (
 
@@ -29,26 +52,18 @@ import { AppSidebar } from "./components/reusableComponents/AppSidebar";
 
 export default function App({ children }) {
   return (
-    <div className="flex flex-col flex-wrap">
-
+    <>
+      <HeaderBar />
       <SidebarProvider>
-        <div className="grow-0">
+        <div style={{ display: "flex" }}>
           <AppSidebar />
+          <main style={{ flex: 1 }}>
+            <SidebarTrigger />
+            {children}
+          </main>
         </div>
-
-
-        <div className="grow">
-          <HeaderBar />
-          <SidebarTrigger />
-          {children}
-        </div>
-
-      </SidebarProvider >
-
-    </div>
-
-
-
-
+      </SidebarProvider>
+    </>
+    
   );
 }
