@@ -84,8 +84,8 @@ const KStaffPage = () => {
       <main
         className="relative w-full bg-cover bg-center flex justify-center items-center"
         style={{
-          height: "calc(100vh - 110px)",
-          backgroundImage: "url('/background-image.svg')",
+          'height': "calc(100vh - 110px)",
+          'backgroundImage': "url('/background-image.svg')",
         }}
       >
         <div className="absolute inset-0 bg-[#1F3463] bg-opacity-80 backdrop-blur-[5px] z-0"></div>
